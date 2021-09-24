@@ -6,25 +6,27 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "prepare": "husky install"
   },
   "author": "jiang.sheng",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"git commit trigger husky pre-commit hook\" "
-    }
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.15.6",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@typescript-eslint/parser": "^4.31.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.3.0",
     "eslint": "^7.32.0",
@@ -40,6 +42,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.4.1",
