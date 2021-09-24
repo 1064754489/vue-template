@@ -13,7 +13,7 @@
   "author": "jiang.sheng",
   "license": "ISC",
   "lint-staged": {
-    "*.{js,ts}": "eslint --fix"
+    "*.{js,vue}": "eslint --fix"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.15.0",
