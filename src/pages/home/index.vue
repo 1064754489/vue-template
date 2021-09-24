@@ -7,6 +7,15 @@ export default {
   data() {
     return {}
   },
+  methods: {
+    test() {
+      const a = 1
+      const b = 2
+      if (a == b) {
+        console.log(a + b)
+      }
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
