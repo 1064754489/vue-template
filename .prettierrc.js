@@ -12,9 +12,9 @@ module.exports = {
   arrowParens: 'always', // 单参数箭头函数参数周围使用圆括号-eg: (x) => x
   requirePragma: false, // 无需顶部注释即可格式化
   insertPragma: false, // 在已被preitter格式化的文件顶部加上标注
-  proseWrap: 'preserve',
+  proseWrap: 'preserve', // 按照markdown文本样式进行折行
   htmlWhitespaceSensitivity: 'ignore', // 对HTML全局空白不敏感
   vueIndentScriptAndStyle: false, // 不对vue中的script及style标签缩进
   endOfLine: 'lf', // 结束行形式
-  embeddedLanguageFormatting: 'auto', // 对引用代码进行格式化
-};
+  embeddedLanguageFormatting: 'auto', // 是否格式化嵌入到JS中的html标记的代码段或者Markdown语法 auto-格式化 off-不格式化
+}
