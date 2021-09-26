@@ -9,7 +9,7 @@ export default {
   },
   methods: {
     test() {
-      const a = 12
+      const a = 121
       const b = 2
       if (a === b) {
         console.log(a + b)
