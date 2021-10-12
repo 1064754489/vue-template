@@ -11,7 +11,8 @@ export default {
     test() {
       const a = 121
       const b = 2
-      if (a === b) {
+      // eslint-disable-next-line eqeqeq
+      if (a == b) {
         console.log(a + b)
       }
     },

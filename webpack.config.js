@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const devServerPort = 8000 // 开发服务器端口号
+const devServerPort = 8001 // 开发服务器端口号
 
 // 是否是开发环境
 // 这个NODE_ENV就是从package.json的dev/build scripts传进来的

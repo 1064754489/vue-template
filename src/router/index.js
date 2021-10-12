@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/index.vue'
 import NotFound from '@/pages/404.vue'
 import Layout from '@/pages/layout/index.vue'
+import Home from '@/pages/home/index.vue'
+import Report from '@/pages/report/index.vue'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ const routes = [
         path: 'home',
         name: 'home',
         component: Home,
+      },
+      {
+        path: 'report',
+        name: 'report',
+        component: Report,
       },
     ],
   },
