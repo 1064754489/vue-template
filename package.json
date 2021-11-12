@@ -64,8 +64,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
+    "axios": "^0.22.0",
     "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
     "chokidar": "^3.5.2",
+    "easy-config-mock": "^1.0.2",
     "echarts": "^5.2.1",
     "element-ui": "^2.15.6",
     "express": "^4.17.1",
@@ -75,7 +78,8 @@
     "less-loader": "^10.0.1",
     "mockjs": "^1.1.0",
     "portfinder": "^1.0.28",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
   },
   "config": {
     "commitizen": {

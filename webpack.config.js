@@ -4,7 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const EasyConfigMock = require('easy-config-mock')
+const packageName = require('./package.json').name
+
 const devServerPort = 8001 // 开发服务器端口号
+
+new EasyConfigMock({
+  // 将配置文件路径传递进去，服务会自动监听文件变化并重启服务
+  path: path.resolve(__dirname, 'mock.config.js'),
+})
 
 // 是否是开发环境
 // 这个NODE_ENV就是从package.json的dev/build scripts传进来的
@@ -16,14 +24,9 @@ const config = {
   // 输出文件
   output: {
     path: path.join(__dirname, 'dist'),
-    /**
-     * hash跟chunkhash的区别，如果entry有多个，或者需要单独打包类库到
-     * 一个js文件的时候，hash是所有打包出来的每个js文件都是同样的哈希，
-     * 而chunkhash就是只是那个chunk的哈希，也就是chunkhash如果那个chunk
-     * 没有变化就不会变，而hash只要某一个文件内容有变化都是不一样的，所以
-     * 用chunkhash区分开每一个文件有变化时才更新，让浏览器起到缓存的作用
-     */
     filename: isDev ? 'bundle.[hash:8].js' : '[name].[chunkhash:8].js',
+    library: `${packageName}-[name]`,
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
